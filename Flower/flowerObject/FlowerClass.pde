@@ -7,6 +7,9 @@ class Flower {
 
   int xdirection = 1;
   int ydirection = 1;
+  
+  float xspeed = 1; 
+  float yspeed = 1;
 
   Flower(float temp_r, int temp_n_petals, float temp_x, float temp_y, int temp_petalColor) {
     r = temp_r;
@@ -18,6 +21,7 @@ class Flower {
 
   void display () {
     bounce();
+    move();
 
     float ballX;
     float ballY;
@@ -33,7 +37,7 @@ class Flower {
   }
 
   //https://processing.org/examples/bounce.html  
-  void move(float xspeed, float yspeed) {
+  void move() {
     x = x + (xspeed * xdirection);
     y = y + (yspeed * ydirection);
   }
@@ -45,5 +49,10 @@ class Flower {
     if (y > height-r || y < r) {
       ydirection *= -1;
     }
+  }
+  
+  void setSpeed(float xspeed, float yspeed) {
+    this.xspeed = xspeed;
+    this.yspeed = yspeed;
   }
 }
