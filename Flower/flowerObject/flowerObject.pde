@@ -10,7 +10,7 @@ void setup() {
   float _x = width/2;
   float _y = height/2;
   int _pc = #FFA000;
-  
+
   myFlower1 = new Flower(_r1, _petals, _x, _y, _pc);
   myFlower2 = new Flower(50, 6, _x, _y, _pc);
   myFlower3 = new Flower(70, 10, 200, 300, _pc);
@@ -25,4 +25,6 @@ void draw() {
   myFlower2.setSpeed(3.2, 3.4);
   myFlower3.display();
   myFlower3.setSpeed(4.2, 3.4);
+  
+  print(myFlower1.getXspeed());
 }

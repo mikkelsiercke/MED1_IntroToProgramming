@@ -7,7 +7,7 @@ class Flower {
 
   int xdirection = 1;
   int ydirection = 1;
-  
+
   float xspeed = 1; 
   float yspeed = 1;
 
@@ -50,9 +50,13 @@ class Flower {
       ydirection *= -1;
     }
   }
-  
+
   void setSpeed(float xspeed, float yspeed) {
     this.xspeed = xspeed;
     this.yspeed = yspeed;
+  }
+  
+  float getXspeed() {
+   return this.xspeed; 
   }
 }
