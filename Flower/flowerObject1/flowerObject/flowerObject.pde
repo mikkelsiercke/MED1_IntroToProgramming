@@ -9,14 +9,14 @@ void setup() {
 
   float x = width/2;
   float y = height/2;
-  int pc = #FFA000;
+  int pc = #C9061D;
   int carColor = #E312FF;
-  int hitColor = #AA19FA;                      
+  int hitColor = #AA19FA;  
 
   myFlower1 = new Flower(30, 7, x, y, pc, 2, 2, hitColor);
   myFlower2 = new Flower(50, 6, x, y, #EF00F0, 2.3, 2.1, #FA19C2);
   myFlower3 = new Flower(20, 7, 200, 300, #0AF776, 2, 2, #FA6419);
-  myCar1 = new Flower(x, y, 4, carColor, 2, 2);
+  myCar1 = new Flower(x, y, 3, carColor, 2, 2);
 
   myFlowers = new Flower[0];
 

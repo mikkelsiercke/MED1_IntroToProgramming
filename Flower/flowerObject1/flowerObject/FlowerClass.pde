@@ -16,7 +16,7 @@ class Flower {
   float xspeed, yspeed;
 
   float easing = 0.05;
-  
+
   boolean hit = false;
 
   Flower(float r, int n_petals, float x, float y, int petalColor, float xspeed, float yspeed, 
@@ -50,13 +50,13 @@ class Flower {
     } else {
       fill(petalColor);
     }
-    
+
     for (float i = 0; i < PI * 2; i += 2 * PI / n_petals) {
       ballX = x + r*cos(i);
       ballY = y + r*sin(i);
       ellipse(ballX, ballY, r, r);
     }
-    
+
     fill(200, 0, 0);
     ellipse(x, y, r * 1.2, r * 1.2);
   }
