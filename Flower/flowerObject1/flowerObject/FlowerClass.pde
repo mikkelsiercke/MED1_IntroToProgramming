@@ -18,7 +18,8 @@ class Flower {
   float easing = 0.05;
 
   boolean hit = false;
-
+  
+  //Flower object constructor
   Flower(float r, int n_petals, float x, float y, int petalColor, float xspeed, float yspeed, 
     int hitColor) {
     this.r = r;
@@ -31,6 +32,7 @@ class Flower {
     this.hitColor = hitColor;
   } 
 
+  //Car object constructor
   Flower(float x, float y, int size, int carColor, float xspeed, float yspeed) {
     this.x = x;
     this.y = y;
@@ -74,7 +76,7 @@ class Flower {
   }
 
   void flowerHit(Flower flower) {
-    if (dist(flower.x, flower.y, x, y) < r * 2) {      
+    if (dist(flower.x, flower.y, x, y) < r * 2) {     
       hit = true;
     } else {
       hit = false;

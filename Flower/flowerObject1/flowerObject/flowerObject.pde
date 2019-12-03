@@ -16,7 +16,7 @@ void setup() {
   myFlower1 = new Flower(30, 7, x, y, pc, 2, 2, hitColor);
   myFlower2 = new Flower(50, 6, x, y, #EF00F0, 2.3, 2.1, #FA19C2);
   myFlower3 = new Flower(20, 7, 200, 300, #0AF776, 2, 2, #FA6419);
-  myCar1 = new Flower(x, y, 3, carColor, 2, 2);
+  myCar1 = new Flower(x, y, 5, carColor, 2, 2);
 
   myFlowers = new Flower[0];
 
@@ -30,7 +30,11 @@ void setup() {
 }
 
 void draw() {
-  background(#EEFAE1);
+  if (myFlower3.hit != true) {
+    background(#EEFAE1);
+  } else {
+    background(0);
+  }
 
   for (int i = 0; i < myFlowers.length; i++) {
     myFlowers[i].displayFlower();
